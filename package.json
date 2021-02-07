@@ -1,0 +1,10 @@
+{
+  "name": "24mecical_coporate_site",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Kota Hosokawa",
+  "license": "MIT",
+  "dependencies": {
+    "prettier": "^2.2.1"
+  }
+}
