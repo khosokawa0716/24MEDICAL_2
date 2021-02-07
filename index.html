@@ -1,11 +1,102 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>株式会社24MEDICAL</title>
-</head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>株式会社24MEDICAL</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Amatic+SC"
+    />
+    <link rel="stylesheet" href="./css/app.css" type="text/css" />
+  </head>
 <body>
-  
+  <header id="header" class="l-header js-float-menu"></header>
+  <main id="main">
+    <section id="hero" class="p-hero u-width js-float-menu-target">
+      <h2 class="p-hero__title">
+        1人で頑張らない<br />みんなで支える<br />次世代の在宅医療
+      </h2>
+    </section>
+
+    <section id="about" class="l-container u-bgColor__project u-box-shadow">
+      <div class="l-container__body l-container__body-course">
+      <p class="p-hero__paragraph">
+        私たち24MEDICALは地域医療を24時間365日支えます。<br />
+        超高齢化社会の日本において在宅医療のニーズは高まっています。<br />
+        地域の薬局は24時間365日の対応を求められますが、人手が足りません。<br />
+        他の薬局と連携して在宅医療の質を向上し、全ての人々が最後の場所を選べる環境を目指します。
+      </p>
+        <div class="c-panel__group c-panel__group__flex">
+          <div
+            class="c-panel c-panel__border c-panel__cource c-panel__active"
+          >
+              <div class="c-panel__head">
+                <span class="u-ft-corp u-ft-l">24サポート</span>
+              </div>
+              <div class="c-panel__foot">
+                <p>
+                  オンコール、緊急配薬を代行します。<br />
+                  連携薬局制度を使用し、地域の薬局を支援します。
+                </p>
+              </div>
+          </div>
+
+          <div
+            class="c-panel c-panel__border c-panel__cource c-panel__active"
+          >
+              <div class="c-panel__head">
+                <span class="u-ft-corp u-ft-l">24薬局</span>
+              </div>
+              <div class="c-panel__foot">
+                <p>
+                  ２４時間３６５日対応できる地域を支える薬局。<br />
+                  個人の居宅、施設、全ての方々に安心を届けます。
+                </p>
+              </div>
+          </div>
+          <div
+            class="c-panel c-panel__border c-panel__cource c-panel__active"
+          >
+              <div class="c-panel__head">
+                <span class="u-ft-corp u-ft-l">24フルケア</span>
+              </div>
+              <div class="c-panel__foot">
+                <p>
+                  薬剤師本来の業務に集中してもらうため、対物業務代行をします。<br />
+                  ワークライフバランスを大切にする働き方を支援します。
+                </p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="l-container u-bgColor__project u-box-shadow" id="news">
+      <h2 class="l-container__title"><span>お知らせ</span></h2>
+      <div class="l-container__body p-company-overview">
+        <dl>
+            <dt class="p-company-overview__term">2020年12月21日</dt>
+            <dd class="p-company-overview__description">24薬局サービスを開始</dd>
+            <dt class="p-company-overview__term">2020年12月7日</dt>
+            <dd class="p-company-overview__description"
+              >会社設立</dd
+            >
+          </li>
+        </dl>
+      </div>
+    </section>
+  </main>
+  <footer id="footer" class="l-footer"></footer>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $("#header").load("common/header.html");
+        $("#footer").load("common/footer.html");
+      });
+    </script>
 </body>
 </html>

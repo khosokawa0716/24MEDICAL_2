@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>お問い合わせ | 株式会社24MEDICAL</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Amatic+SC"
+    />
+    <link rel="stylesheet" href="./css/app.css" type="text/css" />
+  </head>
+<body>
+  <header id="header" class="l-header js-float-menu"></header>
+  <main id="main">
+    <section id="hero" class="p-hero u-width js-float-menu-target">
+      <h2 class="p-hero__title">お問い合わせ</h2>
+    </section>
+    <section class="l-container" id="contact">
+      <h2 class="l-container__ornament l-container__title">
+        <span class="l-container__ornament__span">お問い合わせ</span>
+      </h2>
+      <div class="l-container__body">
+        <form action="" class="c-form c-form__m">
+          <input
+            type="text"
+            class="c-input c-input__l"
+            placeholder="お名前"
+          />
+          <input
+            type="email"
+            class="c-input c-input__l"
+            placeholder="メールアドレス"
+          />
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            class="c-input c-input__l c-input__textarea mb-xxl"
+            placeholder="お問合わせ内容"
+          ></textarea>
+          <button class="c-btn c-btn__corp c-btn__l">送信</button>
+          <div class="marginT-l">
+            <a href="./privacy.html">プライバシーポリシー</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer id="footer" class="l-footer"></footer>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $("#header").load("common/header.html");
+        $("#footer").load("common/footer.html");
+      });
+    </script>
+</body>
+</html>
