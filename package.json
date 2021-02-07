@@ -4,6 +4,10 @@
   "main": "index.js",
   "author": "Kota Hosokawa",
   "license": "MIT",
+  "scripts": {
+    "sass": "node-sass --include-path scss scss/app.scss css/app.css -w",
+    "prettier": "npx prettier --write ."
+  },
   "dependencies": {
     "prettier": "^2.2.1"
   }
