@@ -1,0 +1,308 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html,
+body {
+  width: 100%;
+  color: #333333;
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+  letter-spacing: 0.1em;
+}
+
+p,
+a {
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: #333333;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #4B66AC;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.l-wrapper {
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 120px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /*footer、header全て含めてmin-height:100vh（ブラウザの画面の高さ）に*/
+}
+
+.l-footer {
+  background: #4B66AC;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 120px;
+  position: absolute;
+  bottom: 0;
+}
+
+@media screen and (max-width: 414px) {
+  .l-footer {
+    font-size: 12px;
+  }
+}
+
+.l-header {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 80px;
+  color: #333333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 414px) {
+  .l-header {
+    height: 60px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.l-header__title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1000px) {
+  .l-header__title {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .l-nav {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    background: rgba(255, 255, 255, 0.85);
+    width: 100%;
+    height: 100vh;
+    padding-top: 50px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .l-nav.active {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    z-index: 2;
+  }
+}
+
+.c-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 1000px) {
+  .c-menu {
+    font-size: 14px;
+  }
+}
+
+.c-menu__item {
+  margin-right: 20px;
+}
+
+.c-menu__link {
+  -webkit-font-smoothing: initial;
+}
+
+@media screen and (max-width: 1000px) {
+  .c-menu {
+    display: block;
+    font-size: 24px;
+  }
+  .c-menu__item {
+    margin-right: initial;
+  }
+  .c-menu__link {
+    -webkit-font-smoothing: initial;
+    display: block;
+    padding: 15px;
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=app.css.map */

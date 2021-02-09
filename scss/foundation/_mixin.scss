@@ -1,0 +1,27 @@
+// ==============================
+// mixin
+// ==============================
+
+@mixin mq($breakpoint: sm) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin sp($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin tb($breakpoint: lg) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin pc($breakpoint: xl) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}

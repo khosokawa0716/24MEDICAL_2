@@ -1,0 +1,40 @@
+// ==============================
+// 変数
+// ==============================
+$font-color_default: #333333;
+$font-color_date: #111111;
+$font-color_white: #ffffff;
+$color_corp: #4B66AC;
+$color_corp_light: #D5E5FC;
+
+$background-color_default: #F2F2F2;
+$background-color_accent: #4B66AC;
+
+$site-width: 100%;
+$site-width-p_pc: 70%;
+$site-width-p_sp: 90%;
+
+$footer-height: 120px;
+
+$font-size_s: 12px;
+$font-size_m: 14px;
+$font-size_default: 16px;
+$font-size_l: 18px;
+$font-size_xl: 24px;
+$font-size_xxl: 30px;
+$font-size_3l: 38px;
+
+$space_s: 5px;
+$space_m: 10px;
+$space_l: 15px;
+$space_xl: 20px;
+$space_xxl: 30px;
+$space_3l: 40px;
+
+// メディアクエリのブレークポイント設定
+$breakpoints: (
+  "sm": "screen and (max-width: 414px)",
+  "md": "screen and (max-width: 768px)",
+  "lg": "screen and (max-width: 1000px)",
+  "xl": "screen and (max-width: 1200px)",
+) !default;

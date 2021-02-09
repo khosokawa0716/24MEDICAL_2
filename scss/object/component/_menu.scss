@@ -1,0 +1,31 @@
+// ==================================
+// menu
+// ==================================
+
+.c-menu {
+  display: flex;
+  align-items: center;
+  font-size: $font-size_l;
+  @include tb() {
+    font-size: $font-size_m;
+  }
+  &__item {
+    margin-right: $space_xl;
+  }
+  &__link {
+    -webkit-font-smoothing: initial;
+  }
+  @include tb() {
+    display: block;
+    font-size: $font-size_xl;
+    &__item {
+      margin-right: initial;
+    }
+    &__link {
+      -webkit-font-smoothing: initial;
+      display: block;
+      padding: $space_l;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+// ==================================
+// header
+// ==================================
+.l-header {
+  box-sizing: border-box;
+  width: 100%;
+  height: 80px;
+  color: $font-color_default;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: $space_xl;
+  padding-right: $space_xl;
+  // position: fixed;
+  transition: 0.3s;
+  // z-index: 2;
+  @include mq() {
+    height: 60px;
+    padding-right: $space_l;
+    padding-left: $space_l;
+  }
+  &__title {
+    font-size: $font-size_xxl;
+    font-weight: bold;
+    @include tb() {
+      font-size: $font-size_xl;
+    }
+  }
+}

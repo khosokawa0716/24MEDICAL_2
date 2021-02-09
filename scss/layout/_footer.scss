@@ -1,0 +1,18 @@
+// ==================================
+// footer
+// ==================================
+.l-footer {
+  background: $background-color_accent;
+  color: $font-color_white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $site-width;
+  height: $footer-height;
+  // 以下2行最下部に固定するための記述
+  position: absolute;
+  bottom: 0;
+  @include mq() {
+    font-size: $font-size_s;
+  }
+}
