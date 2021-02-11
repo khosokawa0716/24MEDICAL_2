@@ -3,7 +3,8 @@
 // ==================================
 .l-header {
   box-sizing: border-box;
-  width: 100%;
+  width: 1045px;
+  margin: 0 auto;
   height: 80px;
   color: $font-color_default;
   display: flex;
@@ -11,9 +12,6 @@
   justify-content: space-between;
   padding-left: $space_xl;
   padding-right: $space_xl;
-  position: absolute;
-  top: 0;
-  left: 0;
   transition: 0.3s;
   z-index: 1;
   @include mq() {
