@@ -190,7 +190,42 @@ img {
     url("../img/hero.jpg") no-repeat;
   background: linear-gradient(transparent, white) no-repeat,
     url("../img/hero.jpg") no-repeat;
-  background-size: 100% 600px, 100% 600px;
+  background-size: 100% 500px, 100% 500px;
+}
+
+.l-container {
+  width: 1045px;
+  margin: 0 auto;
+  padding-bottom: 120px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .l-container {
+    width: 100%;
+  }
+}
+
+.l-container__title {
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 1000px) {
+  .l-container__title {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .l-container__title {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+  }
 }
 
 .l-footer {
@@ -321,8 +356,19 @@ img {
   }
 }
 
+.p-about__title {
+  text-align: center;
+  font-size: 30px;
+  color: #4b66ac;
+  margin-bottom: 40px;
+}
+
+.p-about__text {
+  font-size: 18px;
+}
+
 .p-hero {
-  height: 550px;
+  height: 500px;
   display: block;
   text-align: center;
 }

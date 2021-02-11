@@ -1,0 +1,15 @@
+// ==================================
+// about
+// ==================================
+.p-about {
+  &__title {
+    text-align: center;
+    font-size: $font-size_xxl;
+    color: $color_corp;
+    margin-bottom: $space_3l;
+  }
+
+  &__text {
+    font-size: $font-size_l;
+  }
+}

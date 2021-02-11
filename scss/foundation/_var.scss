@@ -10,11 +10,12 @@ $color_corp_light: #d5e5fc;
 $background-color_default: #f2f2f2;
 $background-color_accent: #4b66ac;
 
-$site-width: 100%;
+$site-width: 1045px;
 $site-width-p_pc: 70%;
 $site-width-p_sp: 90%;
 
-$footer-height: 120px;
+$footer-height: 120px; // l-wrapperのクラスにもこの数値を使用している
+$hero-height: 500px; // backgroundの画像もこの数値で指定している
 
 $font-size_s: 12px;
 $font-size_m: 14px;

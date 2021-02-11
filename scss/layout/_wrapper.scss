@@ -9,5 +9,5 @@
 
   background: linear-gradient(transparent, white) no-repeat,
     url("../img/hero.jpg") no-repeat;
-  background-size: 100% 600px, 100% 600px;
+  background-size: 100% $hero-height, 100% $hero-height;
 }
