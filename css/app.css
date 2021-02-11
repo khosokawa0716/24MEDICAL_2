@@ -140,11 +140,12 @@ body {
   color: #333333;
   font-size: 16px;
   line-height: 1.6;
-  font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-family: "メイリオ", "Meiryo", "ＭＳ ゴシック",
+    "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", sans-serif;
   -webkit-text-size-adjust: 100%;
-     -moz-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
-          text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   letter-spacing: 0.1em;
 }
 
@@ -161,7 +162,7 @@ a {
 }
 
 a:hover {
-  color: #4B66AC;
+  color: #4b66ac;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -176,22 +177,22 @@ img {
   position: relative;
   padding-bottom: 120px;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /*footer、header全て含めてmin-height:100vh（ブラウザの画面の高さ）に*/
 }
 
 .l-footer {
-  background: #4B66AC;
+  background: #4b66ac;
   color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   width: 100%;
   height: 120px;
   position: absolute;
@@ -206,7 +207,7 @@ img {
 
 .l-header {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   width: 100%;
   height: 80px;
   color: #333333;
@@ -214,15 +215,19 @@ img {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding-left: 20px;
   padding-right: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  z-index: 1;
 }
 
 @media screen and (max-width: 414px) {
@@ -261,7 +266,7 @@ img {
     -webkit-transition: 0.5s;
     transition: 0.5s;
     -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    transform: translateX(-100%);
     z-index: 2;
   }
 }
@@ -271,8 +276,8 @@ img {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-size: 18px;
 }
 
@@ -304,5 +309,28 @@ img {
     padding: 15px;
     text-align: center;
   }
+}
+
+.p-hero {
+  background-image: url("../img/hero.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.8);
+  background-blend-mode: lighten;
+  height: 550px;
+  display: block;
+  text-align: center;
+}
+
+.p-hero__title {
+  padding-top: 220px;
+  font-size: 38px;
+  color: #4b66ac;
+}
+
+.p-hero__paragraph {
+  font-size: 18px;
 }
 /*# sourceMappingURL=app.css.map */

@@ -11,9 +11,11 @@
   justify-content: space-between;
   padding-left: $space_xl;
   padding-right: $space_xl;
-  // position: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
   transition: 0.3s;
-  // z-index: 2;
+  z-index: 1;
   @include mq() {
     height: 60px;
     padding-right: $space_l;
