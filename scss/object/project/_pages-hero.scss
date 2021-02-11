@@ -1,0 +1,18 @@
+// ==================================
+// pages-hero
+// ==================================
+.p-pages-hero {
+  height: 550px;
+  display: block;
+  text-align: center;
+
+  &__title {
+    padding-top: 185px;
+    font-size: $font-size_3l;
+    color: $color_corp;
+  }
+
+  &__paragraph {
+    font-size: $font-size_l;
+  }
+}

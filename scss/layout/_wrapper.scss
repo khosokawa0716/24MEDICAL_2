@@ -7,7 +7,7 @@
   padding-bottom: $footer-height;
   box-sizing: border-box; /*footer、header全て含めてmin-height:100vh（ブラウザの画面の高さ）に*/
 
-  background: linear-gradient( transparent, white) no-repeat,url("../img/hero.jpg") no-repeat;
+  background: linear-gradient(transparent, white) no-repeat,
+    url("../img/hero.jpg") no-repeat;
   background-size: 100% 600px, 100% 600px;
-  
 }
