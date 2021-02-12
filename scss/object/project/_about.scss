@@ -6,7 +6,14 @@
     text-align: center;
     font-size: $font-size_xxl;
     color: $color_corp;
-    margin-bottom: $space_3l;
+    margin-bottom: 60px;
+  }
+
+  &__sub-title {
+    text-align: center;
+    font-size: $font-size_xl;
+    color: $color_corp;
+    margin-bottom: $space_l;
   }
 
   &__text {

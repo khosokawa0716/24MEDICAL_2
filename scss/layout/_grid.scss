@@ -5,7 +5,7 @@
 .l-grid {
   &__about {
     display: grid;
-    grid-template-rows: 500px 300px;
+    grid-template-rows: 350px 200px;
     grid-template-columns: 2fr 1fr 1fr 2fr;
     grid-template-areas:
       "areaA areaA areaB areaB"

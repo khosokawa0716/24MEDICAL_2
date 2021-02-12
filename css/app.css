@@ -231,8 +231,8 @@ img {
 .l-grid__about {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 500px 300px;
-  grid-template-rows: 500px 300px;
+  -ms-grid-rows: 350px 200px;
+  grid-template-rows: 350px 200px;
   -ms-grid-columns: 2fr 1fr 1fr 2fr;
   grid-template-columns: 2fr 1fr 1fr 2fr;
   grid-template-areas: "areaA areaA areaB areaB" "areaC areaD areaD areaE";
@@ -403,7 +403,14 @@ img {
   text-align: center;
   font-size: 30px;
   color: #4b66ac;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
+}
+
+.p-about__sub-title {
+  text-align: center;
+  font-size: 24px;
+  color: #4b66ac;
+  margin-bottom: 15px;
 }
 
 .p-about__text {
@@ -440,5 +447,13 @@ img {
 
 .p-pages-hero__paragraph {
   font-size: 18px;
+}
+
+.marginT-l {
+  margin-top: 15px;
+}
+
+.marginT-3l {
+  margin-top: 40px;
 }
 /*# sourceMappingURL=app.css.map */
