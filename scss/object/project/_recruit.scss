@@ -1,0 +1,31 @@
+// ==================================
+// recruit
+// ==================================
+.p-recruit {
+  &__title {
+    font-size: $font-size_xxl;
+    color: $color_corp;
+    margin-bottom: 60px;
+  }
+
+  &__sub-title {
+    font-size: $font-size_xl;
+    color: $color_corp;
+    margin-top: $space_3l;
+    margin-bottom: $space_l;
+  }
+
+  &__text {
+    font-size: $font-size_xl;
+    padding-bottom: $space_3l;
+  }
+
+  &__list {
+    list-style-type: disc;
+    margin-left: $space_xl;
+    &-item {
+      font-size: $font-size_l;
+      padding: $space_s 0;
+    }
+  }
+}

@@ -494,6 +494,34 @@ img {
   width: calc(100% - 180px);
 }
 
+.p-recruit__title {
+  font-size: 30px;
+  color: #4b66ac;
+  margin-bottom: 60px;
+}
+
+.p-recruit__sub-title {
+  font-size: 24px;
+  color: #4b66ac;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+
+.p-recruit__text {
+  font-size: 24px;
+  padding-bottom: 40px;
+}
+
+.p-recruit__list {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.p-recruit__list-item {
+  font-size: 18px;
+  padding: 5px 0;
+}
+
 .marginT-l {
   margin-top: 15px;
 }
