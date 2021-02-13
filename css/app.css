@@ -417,13 +417,43 @@ img {
   font-size: 18px;
 }
 
+.p-about__image {
+  padding: 5px 15px 20px 15px;
+}
+
+.p-company-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 0;
+  border-bottom: 1px dotted #4b66ac;
+}
+
+.p-company-list__item {
+  width: 180px;
+}
+
+.p-company-list__description {
+  width: calc(100% - 180px);
+}
+
+.p-philosophy__title {
+  font-size: 24px;
+  color: #4b66ac;
+  margin-bottom: 40px;
+}
+
+.p-philosophy__text {
+  font-size: 18px;
+}
+
 .p-hero {
   height: 500px;
   display: block;
-  text-align: center;
 }
 
 .p-hero__title {
+  text-align: center;
   padding-top: 185px;
   font-size: 38px;
   color: #4b66ac;
@@ -436,17 +466,32 @@ img {
 .p-pages-hero {
   height: 550px;
   display: block;
-  text-align: center;
 }
 
 .p-pages-hero__title {
-  padding-top: 185px;
+  padding-top: 285px;
   font-size: 38px;
   color: #4b66ac;
 }
 
 .p-pages-hero__paragraph {
   font-size: 18px;
+}
+
+.p-news-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 0;
+  border-bottom: 1px dotted #4b66ac;
+}
+
+.p-news-list__date {
+  width: 180px;
+}
+
+.p-news-list__text {
+  width: calc(100% - 180px);
 }
 
 .marginT-l {

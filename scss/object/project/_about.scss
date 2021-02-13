@@ -19,4 +19,8 @@
   &__text {
     font-size: $font-size_l;
   }
+
+  &__image {
+    padding: $space_s $space_l $space_xl $space_l;
+  }
 }

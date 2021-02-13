@@ -1,15 +1,15 @@
 // ==================================
-// news
+// company
 // ==================================
-.p-news {
+.p-company {
   &-list {
     display: flex;
     padding: $space_xl 0;
     border-bottom: 1px dotted $color_corp;
-    &__date {
+    &__item {
       width: 180px;
     }
-    &__text {
+    &__description {
       width: calc(100% - 180px);
     }
   }

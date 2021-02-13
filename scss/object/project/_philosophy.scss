@@ -1,17 +1,14 @@
 // ==================================
-// pages-hero
+// philosophy
 // ==================================
-.p-pages-hero {
-  height: 550px;
-  display: block;
-
+.p-philosophy {
   &__title {
-    padding-top: 285px;
-    font-size: $font-size_3l;
+    font-size: $font-size_xl;
     color: $color_corp;
+    margin-bottom: $space_3l;
   }
 
-  &__paragraph {
+  &__text {
     font-size: $font-size_l;
   }
 }
