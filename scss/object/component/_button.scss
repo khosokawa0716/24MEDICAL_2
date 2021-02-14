@@ -1,0 +1,36 @@
+// ==================================
+// btn
+// ==================================
+.c-btn {
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  &:hover {
+    transform: translateY(-3px);
+    transition: 0.3s;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+  &__corp {
+    // グラーデーション参考 https://uigradients.com/
+    color: #fff;
+    background: $background-color_accent;
+    background: -webkit-linear-gradient(
+      to right,
+      #87a6c4,
+      $background-color_accent
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #87a6c4,
+      $background-color_accent
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  &__l {
+    padding: $space_l $space_xxl;
+    width: 100%;
+    font-size: $font-size_l;
+  }
+}

@@ -1,0 +1,17 @@
+// ==================================
+// form
+// ==================================
+.c-form {
+  width: 100%;
+  &__m {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    @include sp() {
+      width: 80%;
+    }
+    @include mq() {
+      width: 100%;
+    }
+  }
+}

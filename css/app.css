@@ -359,6 +359,113 @@ img {
   }
 }
 
+.c-btn {
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.c-btn:hover {
+  -webkit-transform: translateY(-3px);
+  transform: translateY(-3px);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.c-btn__corp {
+  color: #fff;
+  background: #4b66ac;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#87a6c4),
+    to(#4b66ac)
+  );
+  background: linear-gradient(to right, #87a6c4, #4b66ac);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.c-btn__l {
+  padding: 15px 30px;
+  width: 100%;
+  font-size: 18px;
+}
+
+.c-form {
+  width: 100%;
+}
+
+.c-form__m {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .c-form__m {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .c-form__m {
+    width: 100%;
+  }
+}
+
+.c-input {
+  display: block;
+  margin-bottom: 30px;
+  border: 3px solid #d5e5fc;
+  border-radius: 4px;
+  outline: none;
+  height: 60px;
+  font-size: 18px;
+  color: #333333;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.c-input__l {
+  padding: 5px 10px;
+  width: 100%;
+}
+
+.c-input:focus {
+  border: 3px solid #4b66ac;
+}
+
+.c-input__textarea {
+  resize: none;
+  height: 300px;
+}
+
+::-webkit-input-placeholder {
+  color: #ccc;
+}
+
+:-ms-input-placeholder {
+  color: #ccc;
+}
+
+::-ms-input-placeholder {
+  color: #ccc;
+}
+
+::placeholder {
+  color: #ccc;
+}
+
 .c-menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -472,6 +579,10 @@ img {
   padding-top: 285px;
   font-size: 38px;
   color: #4b66ac;
+}
+
+.p-pages-hero__title--inquiry {
+  margin-left: 210px;
 }
 
 .p-pages-hero__paragraph {

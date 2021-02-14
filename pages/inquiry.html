@@ -11,13 +11,14 @@
       <header id="header" class="l-header js-float-menu"></header>
       <main id="main">
         <section id="hero" class="p-pages-hero js-float-menu-target">
-          <h2 class="p-pages-hero__title">お問い合わせ</h2>
+          <div class="l-container">
+            <h2 class="p-pages-hero__title p-pages-hero__title--inquiry">
+              お問い合わせ
+            </h2>
+          </div>
         </section>
-        <section class="l-container" id="contact">
-          <h2 class="l-container__ornament l-container__title">
-            <span class="l-container__ornament__span">お問い合わせ</span>
-          </h2>
-          <div class="l-container__body">
+        <section id="inquiry" class="p-inquiry">
+          <div class="l-container">
             <form action="" class="c-form c-form__m">
               <input
                 type="text"
@@ -34,11 +35,12 @@
                 id=""
                 cols="30"
                 rows="10"
-                class="c-input c-input__l c-input__textarea mb-xxl"
-                placeholder="お問合わせ内容"
+                class="c-input c-input__l c-input__textarea"
+                placeholder="お問合わせ内容（300文字以内）"
+                maxlength="300"
               ></textarea>
               <button class="c-btn c-btn__corp c-btn__l">送信</button>
-              <div class="marginT-l">
+              <div class="marginT-3l">
                 <a href="./privacy.html">プライバシーポリシー</a>
               </div>
             </form>

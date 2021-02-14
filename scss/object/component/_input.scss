@@ -1,0 +1,29 @@
+// ==================================
+// input
+// ==================================
+.c-input {
+  display: block;
+  margin-bottom: $space_xxl;
+  border: 3px solid $border-color_default;
+  border-radius: 4px;
+  outline: none;
+  height: 60px;
+  font-size: $font-size_l;
+  color: $font-color_default;
+  box-sizing: border-box;
+  &__l {
+    padding: $space_s $space_m;
+    width: 100%;
+  }
+  &:focus {
+    border: 3px solid $color_corp;
+  }
+  &__textarea {
+    resize: none;
+    height: 300px;
+  }
+}
+
+::placeholder {
+  color: #ccc;
+}
