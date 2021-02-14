@@ -140,12 +140,11 @@ body {
   color: #333333;
   font-size: 16px;
   line-height: 1.6;
-  font-family: "メイリオ", "Meiryo", "ＭＳ ゴシック",
-    "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", sans-serif;
+  font-family: "メイリオ", "Meiryo", "ＭＳ ゴシック", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", sans-serif;
   -webkit-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
   letter-spacing: 0.1em;
 }
 
@@ -177,19 +176,10 @@ img {
   position: relative;
   padding-bottom: 120px;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   /*footer、header全て含めてmin-height:100vh（ブラウザの画面の高さ）に*/
-  background: -webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        from(transparent),
-        to(white)
-      )
-      no-repeat,
-    url("../img/hero.jpg") no-repeat;
-  background: linear-gradient(transparent, white) no-repeat,
-    url("../img/hero.jpg") no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(white)) no-repeat, url("../img/hero.jpg") no-repeat;
+  background: linear-gradient(transparent, white) no-repeat, url("../img/hero.jpg") no-repeat;
   background-size: 100% 500px, 100% 500px;
 }
 
@@ -201,8 +191,10 @@ img {
   padding-right: 15px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   .l-container {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     width: 100%;
   }
 }
@@ -232,10 +224,16 @@ img {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 350px 200px;
-  grid-template-rows: 350px 200px;
+      grid-template-rows: 350px 200px;
   -ms-grid-columns: 2fr 1fr 1fr 2fr;
-  grid-template-columns: 2fr 1fr 1fr 2fr;
-  grid-template-areas: "areaA areaA areaB areaB" "areaC areaD areaD areaE";
+      grid-template-columns: 2fr 1fr 1fr 2fr;
+      grid-template-areas: "areaA areaA areaB areaB" "areaC areaD areaD areaE";
+}
+
+@media screen and (max-width: 1200px) {
+  .l-grid__about {
+    display: block;
+  }
 }
 
 .l-grid__about--areaA {
@@ -278,11 +276,11 @@ img {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
   height: 120px;
   position: absolute;
@@ -297,7 +295,7 @@ img {
 
 .l-header {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   width: 1045px;
   margin: 0 auto;
   height: 80px;
@@ -307,11 +305,11 @@ img {
   display: flex;
   position: relative;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-left: 20px;
   padding-right: 20px;
   -webkit-transition: 0.3s;
@@ -360,7 +358,7 @@ img {
     -webkit-transition: 0.5s;
     transition: 0.5s;
     -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
+            transform: translateX(-100%);
     z-index: 1;
   }
 }
@@ -370,33 +368,27 @@ img {
   cursor: pointer;
   border-radius: 5px;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .c-btn:hover {
   -webkit-transform: translateY(-3px);
-  transform: translateY(-3px);
+          transform: translateY(-3px);
   -webkit-transition: 0.3s;
   transition: 0.3s;
   -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .c-btn__corp {
   color: #fff;
   background: #4b66ac;
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#87a6c4),
-    to(#4b66ac)
-  );
+  background: -webkit-gradient(linear, left top, right top, from(#87a6c4), to(#4b66ac));
   background: linear-gradient(to right, #87a6c4, #4b66ac);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
@@ -439,7 +431,7 @@ img {
   font-size: 18px;
   color: #333333;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .c-input__l {
@@ -477,8 +469,8 @@ img {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 18px;
 }
 
@@ -517,7 +509,7 @@ img {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   position: relative;
   width: 38px;
   height: 30px;
@@ -535,7 +527,7 @@ img {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   position: absolute;
   left: 0;
   width: 100%;
@@ -558,7 +550,7 @@ img {
 
 .p-menu-trigger.active span:nth-of-type(1) {
   -webkit-transform: translateY(12px) rotate(-45deg);
-  transform: translateY(12px) rotate(-45deg);
+          transform: translateY(12px) rotate(-45deg);
 }
 
 .p-menu-trigger.active span:nth-of-type(2) {
@@ -567,7 +559,7 @@ img {
 
 .p-menu-trigger.active span:nth-of-type(3) {
   -webkit-transform: translateY(-15px) rotate(45deg);
-  transform: translateY(-15px) rotate(45deg);
+          transform: translateY(-15px) rotate(45deg);
 }
 
 .p-about__title {
@@ -575,6 +567,21 @@ img {
   font-size: 30px;
   color: #4b66ac;
   margin-bottom: 60px;
+}
+
+@media screen and (max-width: 1000px) {
+  .p-about__title {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .p-about__title {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+  }
 }
 
 .p-about__sub-title {
@@ -630,8 +637,25 @@ img {
   color: #4b66ac;
 }
 
+@media screen and (max-width: 768px) {
+  .p-hero__title {
+    padding-top: 160px;
+    font-size: 30px;
+  }
+}
+
 .p-hero__paragraph {
   font-size: 18px;
+}
+
+.p-hero__br {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .p-hero__br {
+    display: block;
+  }
 }
 
 .p-pages-hero {

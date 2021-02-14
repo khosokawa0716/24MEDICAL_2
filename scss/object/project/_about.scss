@@ -7,6 +7,15 @@
     font-size: $font-size_xxl;
     color: $color_corp;
     margin-bottom: 60px;
+    @include tb() {
+      font-size: $font-size_xl;
+    }
+    @include sp() {
+      width: $site-width-p_sp;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: $font-size_l;
+    }
   }
 
   &__sub-title {

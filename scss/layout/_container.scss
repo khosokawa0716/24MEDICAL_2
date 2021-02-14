@@ -8,7 +8,8 @@
   padding-left: $space_l;
   padding-right: $space_l;
 
-  @include sp() {
+  @include tb() {
+    box-sizing: border-box;
     width: 100%;
   }
 

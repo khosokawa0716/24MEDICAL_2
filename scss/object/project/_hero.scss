@@ -10,9 +10,20 @@
     padding-top: 185px;
     font-size: $font-size_3l;
     color: $color_corp;
+    @include sp() {
+      padding-top: 160px;
+      font-size: $font-size_xxl;
+    }
   }
 
   &__paragraph {
     font-size: $font-size_l;
+  }
+
+  &__br {
+    display: none;
+    @include sp() {
+      display: block;
+    }
   }
 }

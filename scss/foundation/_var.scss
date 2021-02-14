@@ -37,7 +37,11 @@ $space_3l: 40px;
 // メディアクエリのブレークポイント設定
 $breakpoints: (
   "sm": "screen and (max-width: 414px)",
+  // mq
   "md": "screen and (max-width: 768px)",
+  // sp
   "lg": "screen and (max-width: 1000px)",
+  // tb
   "xl": "screen and (max-width: 1200px)",
+  // pc
 ) !default;
