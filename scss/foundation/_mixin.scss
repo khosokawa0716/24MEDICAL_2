@@ -3,24 +3,28 @@
 // ==============================
 
 @mixin mq($breakpoint: sm) {
+  // max-width: 414px
   @media #{map-get($breakpoints, $breakpoint)} {
     @content;
   }
 }
 
 @mixin sp($breakpoint: md) {
+  // max-width: 768px
   @media #{map-get($breakpoints, $breakpoint)} {
     @content;
   }
 }
 
 @mixin tb($breakpoint: lg) {
+  // max-width: 1000px
   @media #{map-get($breakpoints, $breakpoint)} {
     @content;
   }
 }
 
 @mixin pc($breakpoint: xl) {
+  // max-width: 1200px
   @media #{map-get($breakpoints, $breakpoint)} {
     @content;
   }

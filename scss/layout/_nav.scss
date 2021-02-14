@@ -16,7 +16,7 @@
     &.active {
       transition: 0.5s;
       transform: translateX(-100%);
-      z-index: 2;
+      z-index: 1;
     }
   }
 }

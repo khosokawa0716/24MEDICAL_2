@@ -1,9 +1,9 @@
 <a href="/24MEDICAL_2/index.html"><h1 class="l-header__title">24MEDICAL</h1></a>
 
-<div class="p-menuTrigger js-toggle-sp-menu">
-  <span class="p-menuTrigger__barger"></span>
-  <span class="p-menuTrigger__barger"></span>
-  <span class="p-menuTrigger__barger"></span>
+<div class="p-menu-trigger js-toggle-sp-menu">
+  <span class="p-menu-trigger__barger"></span>
+  <span class="p-menu-trigger__barger"></span>
+  <span class="p-menu-trigger__barger"></span>
 </div>
 <nav id="nav" class="l-nav js-toggle-sp-menu-target">
   <ul class="c-menu">
@@ -33,3 +33,19 @@
     </li>
   </ul>
 </nav>
+
+<script>
+  $(function () {
+    // SPメニュー
+    $(".js-toggle-sp-menu").on("click", function () {
+      $(this).toggleClass("active");
+      $(".js-toggle-sp-menu-target").toggleClass("active");
+    });
+
+    // SPメニュー　項目をクリックしたら自動的に閉じる
+    $(".js-toggle-sp-menu-item").on("click", function () {
+      $(".js-toggle-sp-menu").toggleClass("active");
+      $(".js-toggle-sp-menu-target").toggleClass("active");
+    });
+  });
+</script>
