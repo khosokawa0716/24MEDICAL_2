@@ -770,7 +770,20 @@ img {
 }
 
 .p-pages-hero__title--inquiry {
-  margin-left: 210px;
+  margin: 0 auto;
+  width: 60%;
+}
+
+@media screen and (max-width: 768px) {
+  .p-pages-hero__title--inquiry {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .p-pages-hero__title--inquiry {
+    width: 100%;
+  }
 }
 
 .p-pages-hero__paragraph {

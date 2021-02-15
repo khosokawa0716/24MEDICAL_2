@@ -18,7 +18,15 @@
     }
 
     &--inquiry {
-      margin-left: 210px;
+      // c-form__mと左端を合わせる
+      margin: 0 auto;
+      width: 60%;
+      @include sp() {
+        width: 80%;
+      }
+      @include mq() {
+        width: 100%;
+      }
     }
   }
 
