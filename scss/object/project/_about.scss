@@ -11,7 +11,9 @@
       font-size: $font-size_xl;
     }
     @include sp() {
+      text-align: left;
       font-size: $font-size_l;
+      margin-bottom: $space_xl;
     }
   }
 
@@ -21,22 +23,31 @@
     color: $color_corp;
     margin-bottom: $space_l;
     @include tb() {
+      text-align: left;
       font-size: $font-size_l;
+      margin-bottom: $space_s;
     }
     @include sp() {
-      font-size: $font-size_m;
+      font-size: $font-size_l;
     }
   }
 
   &__text {
     font-size: $font-size_l;
+    margin-bottom: $space_3l;
     @include sp() {
       font-size: $font-size_m;
-      margin-bottom: $space_l;
+      margin-bottom: $space_xl;
     }
   }
 
   &__image {
     padding: $space_s $space_l $space_xl $space_l;
+    @include tb() {
+      margin-bottom: $space_xxl;
+    }
+    @include sp() {
+      margin-bottom: $space_l;
+    }
   }
 }

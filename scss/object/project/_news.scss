@@ -6,11 +6,25 @@
     display: flex;
     padding: $space_xl 0;
     border-bottom: 1px dotted $color_corp;
+    @include sp() {
+      display: block;
+      padding: $space_l 0;
+      border-bottom: 1px dotted $font-color_default;
+      font-size: $font-size_m;
+    }
     &__date {
       width: 180px;
+      @include sp() {
+        color: $color_corp;
+        margin-bottom: $space_s;
+        width: 100%;
+      }
     }
     &__text {
       width: calc(100% - 180px);
+      @include sp() {
+        width: 100%;
+      }
     }
   }
 }

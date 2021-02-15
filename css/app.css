@@ -211,6 +211,7 @@ img {
   .l-container {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    padding-bottom: 60px;
     width: 100%;
   }
 }
@@ -224,6 +225,7 @@ img {
 @media screen and (max-width: 1000px) {
   .l-container__title {
     font-size: 24px;
+    margin-bottom: 30px;
   }
 }
 
@@ -232,6 +234,7 @@ img {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 20px;
     font-size: 18px;
   }
 }
@@ -599,7 +602,9 @@ img {
 
 @media screen and (max-width: 768px) {
   .p-about__title {
+    text-align: left;
     font-size: 18px;
+    margin-bottom: 20px;
   }
 }
 
@@ -612,29 +617,44 @@ img {
 
 @media screen and (max-width: 1000px) {
   .p-about__sub-title {
+    text-align: left;
     font-size: 18px;
+    margin-bottom: 5px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .p-about__sub-title {
-    font-size: 14px;
+    font-size: 18px;
   }
 }
 
 .p-about__text {
   font-size: 18px;
+  margin-bottom: 40px;
 }
 
 @media screen and (max-width: 768px) {
   .p-about__text {
     font-size: 14px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 }
 
 .p-about__image {
   padding: 5px 15px 20px 15px;
+}
+
+@media screen and (max-width: 1000px) {
+  .p-about__image {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .p-about__image {
+    margin-bottom: 15px;
+  }
 }
 
 .p-company-list {
@@ -729,12 +749,35 @@ img {
   border-bottom: 1px dotted #4b66ac;
 }
 
+@media screen and (max-width: 768px) {
+  .p-news-list {
+    display: block;
+    padding: 15px 0;
+    border-bottom: 1px dotted #333333;
+    font-size: 14px;
+  }
+}
+
 .p-news-list__date {
   width: 180px;
 }
 
+@media screen and (max-width: 768px) {
+  .p-news-list__date {
+    color: #4b66ac;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+}
+
 .p-news-list__text {
   width: calc(100% - 180px);
+}
+
+@media screen and (max-width: 768px) {
+  .p-news-list__text {
+    width: 100%;
+  }
 }
 
 .p-recruit__title {
