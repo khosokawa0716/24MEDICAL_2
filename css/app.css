@@ -665,12 +665,35 @@ img {
   border-bottom: 1px dotted #4b66ac;
 }
 
+@media screen and (max-width: 768px) {
+  .p-company-list {
+    display: block;
+    padding: 15px 0;
+    border-bottom: 1px dotted #333333;
+    font-size: 14px;
+  }
+}
+
 .p-company-list__item {
   width: 180px;
 }
 
+@media screen and (max-width: 768px) {
+  .p-company-list__item {
+    color: #4b66ac;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+}
+
 .p-company-list__description {
   width: calc(100% - 180px);
+}
+
+@media screen and (max-width: 768px) {
+  .p-company-list__description {
+    width: 100%;
+  }
 }
 
 .p-philosophy__title {
@@ -723,14 +746,27 @@ img {
 }
 
 .p-pages-hero {
-  height: 550px;
+  height: 500px;
   display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .p-pages-hero {
+    height: 350px;
+  }
 }
 
 .p-pages-hero__title {
   padding-top: 285px;
   font-size: 38px;
   color: #4b66ac;
+}
+
+@media screen and (max-width: 768px) {
+  .p-pages-hero__title {
+    padding-top: 210px;
+    font-size: 30px;
+  }
 }
 
 .p-pages-hero__title--inquiry {

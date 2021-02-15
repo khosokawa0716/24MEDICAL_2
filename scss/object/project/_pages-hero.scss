@@ -2,13 +2,20 @@
 // pages-hero
 // ==================================
 .p-pages-hero {
-  height: 550px;
+  height: $hero-height;
+  @include sp() {
+    height: $hero-height_sp;
+  }
   display: block;
 
   &__title {
     padding-top: 285px;
     font-size: $font-size_3l;
     color: $color_corp;
+    @include sp() {
+      padding-top: 210px;
+      font-size: $font-size_xxl;
+    }
 
     &--inquiry {
       margin-left: 210px;
