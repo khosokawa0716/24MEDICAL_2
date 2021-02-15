@@ -11,9 +11,6 @@
       font-size: $font-size_xl;
     }
     @include sp() {
-      width: $site-width-p_sp;
-      margin-left: auto;
-      margin-right: auto;
       font-size: $font-size_l;
     }
   }
@@ -23,10 +20,20 @@
     font-size: $font-size_xl;
     color: $color_corp;
     margin-bottom: $space_l;
+    @include tb() {
+      font-size: $font-size_l;
+    }
+    @include sp() {
+      font-size: $font-size_m;
+    }
   }
 
   &__text {
     font-size: $font-size_l;
+    @include sp() {
+      font-size: $font-size_m;
+      margin-bottom: $space_l;
+    }
   }
 
   &__image {

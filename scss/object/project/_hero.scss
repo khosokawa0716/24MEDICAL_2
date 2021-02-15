@@ -3,6 +3,9 @@
 // ==================================
 .p-hero {
   height: $hero-height;
+  @include sp() {
+    height: $hero-height_sp;
+  }
   display: block;
 
   &__title {
@@ -11,7 +14,7 @@
     font-size: $font-size_3l;
     color: $color_corp;
     @include sp() {
-      padding-top: 160px;
+      padding-top: 110px;
       font-size: $font-size_xxl;
     }
   }
