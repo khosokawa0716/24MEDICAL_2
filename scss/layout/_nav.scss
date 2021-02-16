@@ -10,7 +10,7 @@
     right: -100%;
     background: rgba(255, 255, 255, 0.85);
     width: 100%;
-    height: 100vh;
+    min-height: 1000vh; // 画面いっぱいにするため。もっとスマートな記述があるはず
     padding-top: 50px;
     transition: 0.5s;
     &.active {
