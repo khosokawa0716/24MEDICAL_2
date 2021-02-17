@@ -703,8 +703,27 @@ img {
   margin-bottom: 40px;
 }
 
+@media screen and (max-width: 1000px) {
+  .p-philosophy__title {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .p-philosophy__title {
+    font-size: 18px;
+  }
+}
+
 .p-philosophy__text {
   font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+  .p-philosophy__text {
+    font-size: 14px;
+  }
 }
 
 .p-hero {
@@ -789,6 +808,16 @@ img {
 
 .p-pages-hero__paragraph {
   font-size: 18px;
+}
+
+.p-pages-hero__br {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .p-pages-hero__br {
+    display: block;
+  }
 }
 
 .p-news-list {

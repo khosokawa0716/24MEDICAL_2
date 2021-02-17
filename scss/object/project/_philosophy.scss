@@ -6,9 +6,19 @@
     font-size: $font-size_xl;
     color: $color_corp;
     margin-bottom: $space_3l;
+    @include tb() {
+      font-size: $font-size_l;
+      margin-bottom: $space_s;
+    }
+    @include sp() {
+      font-size: $font-size_l;
+    }
   }
 
   &__text {
     font-size: $font-size_l;
+    @include sp() {
+      font-size: $font-size_m;
+    }
   }
 }

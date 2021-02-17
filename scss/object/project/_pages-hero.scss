@@ -33,4 +33,11 @@
   &__paragraph {
     font-size: $font-size_l;
   }
+
+  &__br {
+    display: none;
+    @include sp() {
+      display: block;
+    }
+  }
 }
