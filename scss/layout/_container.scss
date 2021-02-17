@@ -2,14 +2,14 @@
 // container
 // ==================================
 .l-container {
+  box-sizing: border-box;
   width: $site-width;
   margin: 0 auto;
   padding-bottom: 120px;
-  padding-left: $space_l;
-  padding-right: $space_l;
+  padding-left: $space_xl;
+  padding-right: $space_xl;
 
   @include tb() {
-    box-sizing: border-box;
     padding-bottom: 60px;
     width: 100%;
   }

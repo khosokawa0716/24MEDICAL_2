@@ -6,6 +6,13 @@
     font-size: $font-size_xxl;
     color: $color_corp;
     margin-bottom: 60px;
+    @include tb() {
+      font-size: $font-size_xl;
+    }
+    @include sp() {
+      font-size: $font-size_l;
+      margin-bottom: $space_xl;
+    }
   }
 
   &__sub-title {
@@ -13,11 +20,22 @@
     color: $color_corp;
     margin-top: $space_3l;
     margin-bottom: $space_l;
+    @include tb() {
+      font-size: $font-size_l;
+      margin-bottom: $space_s;
+    }
+    @include sp() {
+      font-size: $font-size_l;
+    }
   }
 
   &__text {
     font-size: $font-size_xl;
     padding-bottom: $space_3l;
+    @include sp() {
+      font-size: $font-size_m;
+      margin-bottom: $space_xl;
+    }
   }
 
   &__list {
@@ -26,6 +44,16 @@
     &-item {
       font-size: $font-size_l;
       padding: $space_s 0;
+      @include sp() {
+        font-size: $font-size_m;
+      }
+    }
+  }
+
+  &__br {
+    display: none;
+    @include sp() {
+      display: block;
     }
   }
 }
