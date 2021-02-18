@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>お問い合わせ受付エラー | 24MEDICAL</title>
+    <link rel="stylesheet" href="../css/app.css" type="text/css" />
+  </head>
+  <body>
+    <div class="l-wrapper">
+      <header id="header" class="l-header"></header>
+      <main id="main">
+        <section id="hero" class="p-pages-hero">
+          <div class="l-container">
+            <h2 class="p-pages-hero__title">
+              【エラー】お問い合わせを受け付けできませんでした。
+            </h2>
+          </div>
+        </section>
+        <section id="privacy" class="p-privacy">
+          <div class="l-container">
+            <!-- prettier-ignore -->
+            <p>
+          システムエラーによりお問い合わせを受け付けできませんでした。ご迷惑をおかけして申し訳ございません。<br />
+          しばらく時間をあけて再度お問い合わせいただくか、以下電話番号までご連絡ください。
+            </p>
+            <p class="marginT-l">電話番号：XX-XXXX-XXXX</p>
+            <div class="marginT-3l">
+              <a href="../index.html">トップページに戻る</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer id="footer" class="l-footer"></footer>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $("#header").load("../common/header.html");
+        $("#footer").load("../common/footer.html");
+      });
+    </script>
+  </body>
+</html>

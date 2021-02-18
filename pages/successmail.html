@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>お問い合わせ受付完了 | 24MEDICAL</title>
+    <link rel="stylesheet" href="../css/app.css" type="text/css" />
+  </head>
+  <body>
+    <div class="l-wrapper">
+      <header id="header" class="l-header"></header>
+      <main id="main">
+        <section id="hero" class="p-pages-hero">
+          <div class="l-container">
+            <h2 class="p-pages-hero__title">お問い合わせを受け付けました。</h2>
+          </div>
+        </section>
+        <section id="privacy" class="p-privacy">
+          <div class="l-container">
+            <!-- prettier-ignore -->
+            <p>
+          お問い合わせを受け付けました。ご入力いただいたメールアドレスに、確認のメールをお送りしています。<br />
+          30分以上たっても届かない場合は、再度お問い合わせいただくか以下電話番号までご連絡ください。
+            </p>
+            <p class="marginT-l">電話番号：XX-XXXX-XXXX</p>
+            <div class="marginT-3l">
+              <a href="../index.html">トップページに戻る</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer id="footer" class="l-footer"></footer>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $("#header").load("../common/header.html");
+        $("#footer").load("../common/footer.html");
+      });
+    </script>
+  </body>
+</html>

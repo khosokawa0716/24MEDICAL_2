@@ -19,7 +19,7 @@
         </section>
         <section id="inquiry" class="p-inquiry">
           <div class="l-container">
-            <form action="" class="c-form c-form__m">
+            <form class="c-form c-form__m">
               <input
                 type="text"
                 class="c-input c-input__l"
@@ -39,7 +39,13 @@
                 placeholder="お問合わせ内容（300文字以内）"
                 maxlength="300"
               ></textarea>
-              <button class="c-btn c-btn__corp c-btn__l">送信</button>
+              <button
+                type="button"
+                class="c-btn c-btn__corp c-btn__l"
+                onclick="sendMail()"
+              >
+                送信
+              </button>
               <div class="marginT-3l">
                 <a href="./privacy.html">プライバシーポリシー</a>
               </div>
@@ -59,6 +65,24 @@
         $("#header").load("../common/header.html");
         $("#footer").load("../common/footer.html");
       });
+    </script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function sendMail() {
+        window.location.href = "failmail.html";
+        // Email.send({
+        //     Host : "smtp.gmail.com",
+        //     Username : "xichuanhaotai81",
+        //     Password : "+bA2052013*dC",
+        //     To : 'k.hosokawa0716@gmail.com',
+        //     From : "xichuanhaotai81@gmail.com",
+        //     Subject : "This is the subject",
+        //     Body : "And this is the body"
+        // }).then(
+        //   message => alert(message),
+        //   console.log("メール送りました")
+        // );
+      }
     </script>
   </body>
 </html>
