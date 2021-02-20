@@ -170,7 +170,7 @@
 
         // 問い合わせをした人、およびホストに確認用のメールを送信する
         Email.send({
-          SecureToken: "717d70f9-e3e5-454e-ac2a-8fbadafcf421",
+          SecureToken: "e95ed1ac-142f-486d-b25d-2d92ced1df21",
           To: [userEmail, "k.hosokawa0716@gmail.com"],
           From: "xichuanhaotai81@gmail.com",
           Subject: "お問い合わせを受け付けました。",
@@ -179,7 +179,8 @@
           if (message === "OK") {
             window.location.href = "successmail.html";
           } else {
-            window.location.href = "failmail.html";
+            console.log(message)
+            // window.location.href = "failmail.html";
           }
         });
       }
