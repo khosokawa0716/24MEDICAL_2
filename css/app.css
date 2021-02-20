@@ -395,7 +395,7 @@ img {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.c-btn:hover {
+.c-btn:hover:not(:disabled) {
   -webkit-transform: translateY(-3px);
   transform: translateY(-3px);
   -webkit-transition: 0.3s;
@@ -404,7 +404,13 @@ img {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-.c-btn__corp {
+.c-btn:disabled {
+  pointer-events: none;
+  color: #cccccc;
+  background-color: gray;
+}
+
+.c-btn__corp:not(:disabled) {
   color: #fff;
   background: #4b66ac;
   /* Chrome 10-25, Safari 5.1-6 */
@@ -449,7 +455,7 @@ img {
 
 .c-input {
   display: block;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   border: 3px solid #d5e5fc;
   border-radius: 4px;
   outline: none;
@@ -472,6 +478,16 @@ img {
 .c-input__textarea {
   resize: none;
   height: 300px;
+}
+
+.c-input__error-message {
+  color: #dc143c;
+}
+
+.c-input__count {
+  text-align: right;
+  margin-top: -30px;
+  margin-bottom: 30px;
 }
 
 ::-webkit-input-placeholder {

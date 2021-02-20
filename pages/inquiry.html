@@ -19,29 +19,41 @@
         </section>
         <section id="inquiry" class="p-inquiry">
           <div class="l-container">
-            <form class="c-form c-form__m">
+            <form class="c-form c-form__m" id="form">
+              <p class="c-input__error-message js-err-name"></p>
               <input
                 type="text"
                 class="c-input c-input__l"
-                placeholder="お名前"
+                placeholder="お名前（全角20文字以内）"
+                autofocus
+                maxlength="20"
+                id="name"
               />
+              <p class="c-input__error-message js-err-email"></p>
               <input
                 type="email"
                 class="c-input c-input__l"
                 placeholder="メールアドレス"
+                maxlength="255"
+                id="email"
               />
+              <p class="c-input__error-message js-err-inquiry-content"></p>
               <textarea
-                name=""
-                id=""
+                id="inquiry-content"
                 cols="30"
                 rows="10"
                 class="c-input c-input__l c-input__textarea"
                 placeholder="お問合わせ内容（300文字以内）"
                 maxlength="300"
               ></textarea>
+              <p class="c-input__count">
+                <span class="js-count-string">300</span>/300
+              </p>
               <button
+                id="btn"
                 type="button"
                 class="c-btn c-btn__corp c-btn__l"
+                disabled
                 onclick="sendMail()"
               >
                 送信
@@ -68,20 +80,110 @@
     </script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
+      const errMsgZenkaku = "全角で入力してください";
+      const errMsgFilled = "必ず入力してください";
+      const errMsgEmail = "Emailの形式で入力してください";
+      const maxLengthInquiryContent = 300;
+
+      let isValidName = false;
+      let isValidEmail = false;
+      let isValidInquiry = false;
+
+      // 名前のチェック。全角かつ0文字でない
+      $("#name").on("change focusout", function () {
+        let nameVal = $(this).val();
+        let isZenkaku = nameVal.match(/^[\u3040-\u30ff]+$/) !== null;
+        let isFilledName = nameVal.length !== 0;
+        isValidName = isZenkaku && isFilledName;
+
+        // 名前のチェックがNGの場合に、エラーメッセージを表示する
+        if (isValidName) {
+          $(".js-err-name").text("");
+        } else if (!isFilledName) {
+          $(".js-err-name").text(errMsgFilled);
+        } else {
+          $(".js-err-name").text(errMsgZenkaku);
+        }
+      });
+
+      // Email形式チェック
+      $("#email").on("input change focusout", function () {
+        let emailVal = $(this).val();
+        let isFilledEmail = emailVal.length !== 0;
+        let isTypeEmail =
+          emailVal.match(
+            /^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/
+          ) !== null;
+        isValidEmail = isFilledEmail && isTypeEmail;
+
+        // EmailのチェックがNGの場合に、エラーメッセージを表示する
+        if (isValidEmail) {
+          $(".js-err-email").text("");
+        } else if (!isFilledEmail) {
+          $(".js-err-email").text(errMsgFilled);
+        } else {
+          $(".js-err-email").text(errMsgEmail);
+        }
+      });
+
+      // 問い合わせ内容形式チェック
+      $("#inquiry-content").on("input focusout", function () {
+        let lengthInquiry = $(this).val().length;
+        isValidInquiry = lengthInquiry !== 0;
+        let inputtableLength = maxLengthInquiryContent - lengthInquiry;
+
+        // 問い合わせ内容のチェックがNGの場合に、エラーメッセージを表示する
+        if (isValidInquiry) {
+          $(".js-err-inquiry-content").text("");
+        } else {
+          $(".js-err-inquiry-content").text(errMsgFilled);
+        }
+
+        // 残りの文字数を更新する
+        $(".js-count-string").text(inputtableLength);
+      });
+
+      // 送信ボタン　活性と非活性の切り替え
+      $("#form").on("input change", function () {
+        // すべてのinputの値が正しければ、ボタンを活性にする
+        if (isValidName && isValidEmail && isValidInquiry) {
+          $("#btn").prop("disabled", false);
+        } else {
+          $("#btn").prop("disabled", true);
+        }
+      });
+
       function sendMail() {
-        window.location.href = "failmail.html";
-        // Email.send({
-        //     Host : "smtp.gmail.com",
-        //     Username : "xichuanhaotai81",
-        //     Password : "+bA2052013*dC",
-        //     To : 'k.hosokawa0716@gmail.com',
-        //     From : "xichuanhaotai81@gmail.com",
-        //     Subject : "This is the subject",
-        //     Body : "And this is the body"
-        // }).then(
-        //   message => alert(message),
-        //   console.log("メール送りました")
-        // );
+        $("#btn").prop("disabled", true);
+        let userName = $("#name").val();
+        let userEmail = $("#email").val();
+        let content = $("#inquiry-content").val();
+        content = content.replace(/\r?\n/g, '<br />'); // 改行コードを置換
+        let userMsg =
+          "お問い合わせありがとうございました。以下の内容で受け付けを完了しました。<br />お名前：" +
+          userName +
+          "<br />メールアドレス：" +
+          userEmail +
+          "<br />内容：" +
+          content +
+          "<br />こちらのメールは送信専用となっております。";
+
+        // 問い合わせをした人、およびホストに確認用のメールを送信する
+        Email.send({
+          Host: "smtp.gmail.com",
+          Username: "xichuanhaotai81",
+          Password: "+bA2052013*dC",
+          To: [userEmail, "k.hosokawa0716@gmail.com"],
+          From: "xichuanhaotai81@gmail.com",
+          Subject: "お問い合わせを受け付けました。",
+          Body: userMsg,
+        }).then(function (message) {
+          if (message === "OK") {
+            window.location.href = "successmail.html";
+          } else {
+            window.location.href = "failmail.html";
+          }
+        });
       }
     </script>
   </body>

@@ -3,7 +3,7 @@
 // ==================================
 .c-input {
   display: block;
-  margin-bottom: $space_xxl;
+  margin-bottom: $space_3l;
   border: 3px solid $border-color_default;
   border-radius: 4px;
   outline: none;
@@ -21,6 +21,14 @@
   &__textarea {
     resize: none;
     height: 300px;
+  }
+  &__error-message {
+    color: #dc143c;
+  }
+  &__count {
+    text-align: right;
+    margin-top: -$space_xxl;
+    margin-bottom: $space_xxl;
   }
 }
 

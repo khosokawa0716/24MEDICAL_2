@@ -8,12 +8,17 @@
   box-sizing: border-box;
   transition: 0.3s;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  &:hover {
+  &:hover:not(:disabled) {
     transform: translateY(-3px);
     transition: 0.3s;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   }
-  &__corp {
+  &:disabled {
+    pointer-events: none;
+    color: #cccccc;
+    background-color: gray;
+  }
+  &__corp:not(:disabled) {
     // グラーデーション参考 https://uigradients.com/
     color: #fff;
     background: $background-color_accent;
