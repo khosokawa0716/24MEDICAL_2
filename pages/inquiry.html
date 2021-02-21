@@ -153,7 +153,7 @@
         let userName = $("#name").val();
         let userEmail = $("#email").val();
         let content = $("#inquiry-content").val();
-        content = content.replace(/\r?\n/g, '<br />'); // 改行コードを置換
+        content = content.replace(/\r?\n/g, "<br />"); // 改行コードを置換
         let userMsg =
           "お問い合わせありがとうございました。以下の内容で受け付けを完了しました。<br />お名前：" +
           userName +
@@ -165,7 +165,7 @@
 
         // 問い合わせをした人、およびホストに確認用のメールを送信する
         Email.send({
-          SecureToken : "368fb44b-3874-480d-b0fb-65b6fee76a08",
+          SecureToken: "368fb44b-3874-480d-b0fb-65b6fee76a08",
           To: [userEmail, "haotaix00@gmail.com"],
           From: "k.hosokawa0716@gmail.com",
           Subject: "お問い合わせを受け付けました。",

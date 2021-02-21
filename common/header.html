@@ -8,13 +8,13 @@
 <nav id="nav" class="l-nav js-toggle-sp-menu-target">
   <ul class="c-menu">
     <li class="c-menu__item js-toggle-sp-menu-item">
-      <a href="https://khosokawa0716.github.io/24MEDICAL_2/index.html#about" class="c-menu__link">サービス</a>
+      <a href="/24MEDICAL_2/pages/about.html" class="c-menu__link">サービス</a>
     </li>
     <li class="c-menu__item js-toggle-sp-menu-item">
       <a href="/24MEDICAL_2/pages/philosophy.html" class="c-menu__link">理念</a>
     </li>
     <li class="c-menu__item js-toggle-sp-menu-item">
-      <a href="https://khosokawa0716.github.io/24MEDICAL_2/index.html#news" class="c-menu__link">ニュース</a>
+      <a href="/24MEDICAL_2/pages/news.html" class="c-menu__link">ニュース</a>
     </li>
     <li class="c-menu__item js-toggle-sp-menu-item">
       <a href="/24MEDICAL_2/pages/corporate.html" class="c-menu__link"
@@ -46,25 +46,5 @@
       $(".js-toggle-sp-menu").toggleClass("active");
       $(".js-toggle-sp-menu-target").toggleClass("active");
     });
-
-    // #で始まるアンカーをクリックした場合に処理
-  //  $('a[href*="#"]').click(function() {
-  //     // スクロールの速度
-  //     var speed = 400; // ミリ秒
-  //     // アンカーの値取得
-  //     var href= $(this).attr("href");
-  //     // 移動先を取得
-  //     var target = $(href == "#" || href == "" ? 'html' : href);
-  //     // 移動先を数値で取得
-  //     var position = target.offset().top;
-  //     // スムーススクロール
-  //     $('body,html').animate({scrollTop:position}, speed, 'swing');
-
-  //     // SPメニュー　項目をクリックしたら自動的に閉じる
-  //     $(".js-toggle-sp-menu").toggleClass("active");
-  //     $(".js-toggle-sp-menu-target").toggleClass("active");
-    
-  //     return false;
-  //  });
   });
 </script>
