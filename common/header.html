@@ -33,7 +33,7 @@
     </li>
   </ul>
 </nav>
-
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 <script>
   $(function () {
     // SPメニュー
@@ -46,6 +46,20 @@
     $(".js-toggle-sp-menu-item").on("click", function () {
       $(".js-toggle-sp-menu").toggleClass("active");
       $(".js-toggle-sp-menu-target").toggleClass("active");
+    });
+
+    $('a[href^="#"]').click(function() {
+      // リンク先を取得してキーを切り出し
+      var sz = $(this).attr("href");
+      var key = sz.slice(sz.indexOf("#")+1);
+
+      // リンク先の位置を取得
+      var y = $("a[id='" + key + "']").offset().top;
+
+      // リンク先へ移動
+      $(window).scrollTop(y);
+
+      return false;
     });
   });
 </script>
