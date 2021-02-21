@@ -24,7 +24,7 @@
               <input
                 type="text"
                 class="c-input c-input__l"
-                placeholder="お名前（全角20文字以内）"
+                placeholder="お名前（20文字以内）"
                 autofocus
                 maxlength="20"
                 id="name"
@@ -80,7 +80,6 @@
     </script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
-      const errMsgZenkaku = "全角で入力してください";
       const errMsgFilled = "必ず入力してください";
       const errMsgEmail = "Emailの形式で入力してください";
       const maxLengthInquiryContent = 300;
@@ -89,20 +88,16 @@
       let isValidEmail = false;
       let isValidInquiry = false;
 
-      // 名前のチェック。全角かつ0文字でない
+      // 名前のチェック。0文字でない
       $("#name").on("change focusout", function () {
         let nameVal = $(this).val();
-        let isZenkaku = nameVal.match(/^[\u3040-\u30ff]+$/) !== null;
-        let isFilledName = nameVal.length !== 0;
-        isValidName = isZenkaku && isFilledName;
+        isValidName = nameVal.length !== 0;
 
         // 名前のチェックがNGの場合に、エラーメッセージを表示する
         if (isValidName) {
           $(".js-err-name").text("");
-        } else if (!isFilledName) {
-          $(".js-err-name").text(errMsgFilled);
         } else {
-          $(".js-err-name").text(errMsgZenkaku);
+          $(".js-err-name").text(errMsgFilled);
         }
       });
 
@@ -179,8 +174,7 @@
           if (message === "OK") {
             window.location.href = "successmail.html";
           } else {
-            console.log(message)
-            // window.location.href = "failmail.html";
+            window.location.href = "failmail.html";
           }
         });
       }
