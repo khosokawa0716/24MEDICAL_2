@@ -47,7 +47,7 @@
       $(".js-toggle-sp-menu-target").toggleClass("active");
     });
 
-    $('a[href="/24MEDICAL_2/index.html#about]", a[href="/24MEDICAL_2/index.html#news]"').click(function() {
+    $("a[href*='#']").click(function() {
       // スクロールの速度
       var speed = 400; // ミリ秒
       // アンカーの値取得
