@@ -35,6 +35,7 @@
   &__text {
     font-size: $font-size_l;
     margin-bottom: $space_3l;
+    padding: 0 $space_l;
     @include sp() {
       font-size: $font-size_m;
       margin-bottom: $space_xl;

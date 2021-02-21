@@ -47,7 +47,9 @@
       $(".js-toggle-sp-menu-target").toggleClass("active");
     });
 
-    $("a[href*='#']").click(function() {
+    // #で始まるアンカーをクリックした場合に処理
+   $('a[href*="#"]').click(function() {
+     console.log('スクロール')
       // スクロールの速度
       var speed = 400; // ミリ秒
       // アンカーの値取得
@@ -58,7 +60,12 @@
       var position = target.offset().top;
       // スムーススクロール
       $('body,html').animate({scrollTop:position}, speed, 'swing');
+
+      // SPメニュー　項目をクリックしたら自動的に閉じる
+      $(".js-toggle-sp-menu").toggleClass("active");
+      $(".js-toggle-sp-menu-target").toggleClass("active");
+    
       return false;
-    });
+   });
   });
 </script>
