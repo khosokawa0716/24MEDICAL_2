@@ -1,0 +1,72 @@
+<a href="/24MEDICAL_2/index.html"><h1 class="l-header__title">24MEDICAL</h1></a>
+
+<div class="p-menu-trigger js-toggle-sp-menu">
+  <span class="p-menu-trigger__barger"></span>
+  <span class="p-menu-trigger__barger"></span>
+  <span class="p-menu-trigger__barger"></span>
+</div>
+<nav id="nav" class="l-nav js-toggle-sp-menu-target">
+  <ul class="c-menu">
+    <li class="c-menu__item js-toggle-sp-menu-item">
+      <a href="#about" class="c-menu__link">サービス</a>
+    </li>
+    <li class="c-menu__item js-toggle-sp-menu-item">
+      <a href="/24MEDICAL_2/pages/philosophy.html" class="c-menu__link">理念</a>
+    </li>
+    <li class="c-menu__item js-toggle-sp-menu-item">
+      <a href="#news" class="c-menu__link">お知らせ</a>
+    </li>
+    <li class="c-menu__item js-toggle-sp-menu-item">
+      <a href="/24MEDICAL_2/pages/corporate.html" class="c-menu__link"
+        >会社情報</a
+      >
+    </li>
+    <li class="c-menu__item js-toggle-sp-menu-item">
+      <a href="/24MEDICAL_2/pages/recruit.html" class="c-menu__link"
+        >採用情報</a
+      >
+    </li>
+    <li class="c-menu__item js-toggle-sp-menu-item">
+      <a href="/24MEDICAL_2/pages/inquiry.html" class="c-menu__link"
+        >お問い合わせ</a
+      >
+    </li>
+  </ul>
+</nav>
+<script>
+  $(function () {
+    // SPメニュー
+    $(".js-toggle-sp-menu").on("click", function () {
+      $(this).toggleClass("active");
+      $(".js-toggle-sp-menu-target").toggleClass("active");
+    });
+
+    // SPメニュー　項目をクリックしたら自動的に閉じる
+    $(".js-toggle-sp-menu-item").on("click", function () {
+      $(".js-toggle-sp-menu").toggleClass("active");
+      $(".js-toggle-sp-menu-target").toggleClass("active");
+    });
+
+    // ページ内リンクの処理（スマホ対策）
+    $('a[href^="#"]').click(function () {
+      $(".js-toggle-sp-menu").toggleClass("active");
+      $(".js-toggle-sp-menu-target").toggleClass("active");
+      //ページ内リンク先を取得
+      var href = $(this).attr("href");
+      //リンク先が#か空だったらhtmlに
+      var hash = href == "#" || href == "" ? "html" : href;
+      //スクロール実行
+      scrollToAnker(hash);
+      //リンク無効化
+      return false;
+    });
+
+    // 関数：スムーススクロール
+    // 指定したアンカー(#ID)へアニメーションでスクロール
+    function scrollToAnker(hash) {
+      var target = $(hash);
+      var position = target.offset().top;
+      $("body,html").stop().animate({ scrollTop: position }, 500);
+    }
+  });
+</script>

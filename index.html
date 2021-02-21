@@ -93,7 +93,7 @@
     ></script>
     <script>
       $(function () {
-        $("#header").load("common/header.html");
+        $("#header").load("common/header_top.html");
         $("#footer").load("common/footer.html");
       });
     </script>
@@ -110,18 +110,6 @@
             scrollToAnker(urlHash);
           }, 100);
         }
-
-        //通常のクリック時
-        $('a[href^="#"]').click(function () {
-          //ページ内リンク先を取得
-          var href = $(this).attr("href");
-          //リンク先が#か空だったらhtmlに
-          var hash = href == "#" || href == "" ? "html" : href;
-          //スクロール実行
-          scrollToAnker(hash);
-          //リンク無効化
-          return false;
-        });
 
         // 関数：スムーススクロール
         // 指定したアンカー(#ID)へアニメーションでスクロール
