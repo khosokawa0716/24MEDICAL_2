@@ -532,6 +532,11 @@ img {
   -webkit-font-smoothing: initial;
 }
 
+.c-menu__link--current {
+  color: #4b66ac;
+  pointer-events: none;
+}
+
 @media screen and (max-width: 1000px) {
   .c-menu {
     display: block;

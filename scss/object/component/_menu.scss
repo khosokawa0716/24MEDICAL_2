@@ -14,6 +14,10 @@
   }
   &__link {
     -webkit-font-smoothing: initial;
+    &--current {
+      color: $color_corp;
+      pointer-events: none;
+    }
   }
   @include tb() {
     display: block;

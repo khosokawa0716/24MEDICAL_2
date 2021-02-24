@@ -48,5 +48,18 @@
       $(".js-toggle-sp-menu").toggleClass("active");
       $(".js-toggle-sp-menu-target").toggleClass("active");
     });
+
+    // 現在のページの項目にスタイルを付与する
+    let pageUrl = location.pathname;
+    pageUrlArr = pageUrl.split("/");
+    pageUrlCategory = pageUrlArr.slice(-1)[0]; // 現在URLの一番下のパス（ex. news.htnml）
+    $(".c-menu__link").each(function (i, v) {
+      let selfhref = $(v).attr("href");
+      hrefArr = selfhref.split("/");
+      hrefCategory = hrefArr.slice(-1)[0];
+      if (pageUrlCategory === hrefCategory) {
+        $(v).addClass("c-menu__link--current");
+      }
+    });
   });
 </script>
