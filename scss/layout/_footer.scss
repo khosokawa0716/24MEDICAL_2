@@ -15,4 +15,7 @@
   @include mq() {
     font-size: $font-size_s;
   }
+  &__name {
+    font-size: $font-size_s;
+  }
 }

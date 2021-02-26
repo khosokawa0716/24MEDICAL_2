@@ -34,4 +34,27 @@
       grid-area: areaE;
     }
   }
+
+  &__reservation {
+    display: grid;
+    margin-bottom: $space_3l;
+    @include pc() {
+      display: block;
+    }
+    grid-template-rows: 350px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "areaA areaB areaC";
+
+    &--areaA {
+      grid-area: areaA;
+    }
+
+    &--areaB {
+      grid-area: areaB;
+    }
+
+    &--areaC {
+      grid-area: areaC;
+    }
+  }
 }

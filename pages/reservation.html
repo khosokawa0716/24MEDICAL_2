@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LINEで処方せん予約 | 株式会社24MEDICAL</title>
+    <link rel="stylesheet" href="../css/app.css" type="text/css" />
+  </head>
+  <body>
+    <div class="l-wrapper">
+      <header id="header" class="l-header"></header>
+      <main id="main">
+        <section id="hero" class="p-pages-hero">
+          <div class="l-container">
+            <h2 class="p-pages-hero__title">
+              LINEで<br class="p-pages-hero__br" />処方せん予約
+            </h2>
+          </div>
+        </section>
+        <section id="reservation" class="p-reservation">
+          <div class="l-container">
+            <h2 class="p-reservation__title">
+              処方せんの写真をLINEで送るだけで、お仕事帰りなどに待ち時間なくお薬を受け取れます。<br />
+              LINEでもお薬相談ができますので、お気軽にご相談ください。
+            </h2>
+            <div class="l-grid__reservation">
+              <div class="l-grid__reservation--areaA p-reservation__card">
+                <h3 class="p-reservation__sub-title">STEP1</h3>
+                <div class="p-reservation__sp">
+                  <p class="p-reservation__text">
+                    ボタンをタップしてLINEで友達登録してください。
+                  </p>
+                  <div class="p-reservation__img--btn">
+                    <a href="https://lin.ee/5d9ewpP"
+                      ><img
+                        src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"
+                        alt="友だち追加"
+                        height="36"
+                        border="0"
+                    /></a>
+                  </div>
+                </div>
+                <div class="p-reservation__pc">
+                  <p class="p-reservation__text">
+                    QRコードをスマートフォンで読み取ってください。
+                  </p>
+                  <div class="p-reservation__img">
+                    <img
+                      src="https://qr-official.line.me/sid/M/819xrgua.png"
+                      class="p-reservation__img--qr"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="l-grid__reservation--areaB p-reservation__card">
+                <h3 class="p-reservation__sub-title">STEP2</h3>
+                <p class="p-reservation__text">
+                  処方せん全体が写るように撮影して、LINEから送信してください。
+                </p>
+                <div class="p-reservation__img">
+                  <img
+                    src="../img/smartphone_woman.png"
+                    class="p-reservation__img--sp-woman"
+                  />
+                  <img
+                    src="../img/medical_syohousen.png"
+                    class="p-reservation__img--prescription"
+                  />
+                </div>
+              </div>
+              <div class="l-grid__reservation--areaC p-reservation__card">
+                <h3 class="p-reservation__sub-title">STEP3</h3>
+                <p class="p-reservation__text">
+                  内容、受け取り日時などを確認したら、薬局へお越しください。
+                </p>
+                <div class="p-reservation__img">
+                  <img
+                    src="../img/yakkyoku_yakuzaishi.png"
+                    class="p-reservation__img--pharmacy"
+                  />
+                </div>
+              </div>
+            </div>
+            <h3 class="p-reservation__title">ご利用にあたっての注意事項</h3>
+            <ul class="p-reservation__list">
+              <li>処方せんの有効期限は4日間です。4日以内に処方せんの原本を営業時間内にお持ち下さい。</li>
+              <li>有効期限を過ぎた処方せんは無効となります。</li>
+              <li>お薬を受け取るさいには、処方せんの原本が必要となります。</li>
+              <li>処方せんは全体が鮮明に写るように撮影してください。</li>
+              <li>内容に不備があった場合、LINEにてご連絡させて頂きます。</li>
+              <li>ご使用の端末によってはご利用できない場合がございます。</li>
+              <li>電波状況が良好な場所でご利用ください。</li>
+            </ul>
+          </div>
+        </section>
+      </main>
+      <footer id="footer" class="l-footer"></footer>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $("#header").load("../common/header.html");
+        $("#footer").load("../common/footer.html");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+// ==================================
+// reservation
+// ==================================
+.p-reservation {
+  &__title {
+    font-size: $font-size_xl;
+    color: $color_corp;
+    margin-bottom: $space_xl;
+    @include tb() {
+      font-size: $font-size_l;
+      margin-bottom: $space_s;
+    }
+  }
+
+  &__sub-title {
+    text-align: center;
+    font-size: $font-size_xl;
+    color: $color_corp;
+    margin: $space_l 0;
+    @include tb() {
+      font-size: $font-size_l;
+      margin: $space_s 0;
+    }
+  }
+
+  &__card {
+    background-color: $color_corp_light;
+    border-radius: $border-radius-card;
+    margin: 0 $space_s;
+    padding: $space_s;
+    @include pc() {
+      margin: $space_xl;
+      padding: $space_xl;
+    }
+  }
+
+  &__list {
+    list-style-type: disc;
+    margin-left: $space_xl;
+  }
+  
+  &__text {
+    font-size: $font-size_l;
+    padding: 0 $space_m $space_l $space_m;
+    @include tb() {
+      font-size: $font-size_m;
+      padding: 0 $space_s $space_m $space_s;
+    }
+  }
+
+  &__img {
+    text-align: center;
+    &--btn {
+      width: 116px;
+      margin: 0 auto;
+    }
+    &--qr {
+      width: 110px;
+    }
+    &--sp-woman {
+      width: 110px;
+    }
+    &--prescription {
+      width: 110px;
+    }
+    &--pharmacy {
+      width: 170px;
+    }
+  }
+
+  &__pc {
+    display: block;
+    @include pc() {
+      display: none;
+    }
+  }
+
+  &__sp {
+    display: none;
+    @include pc() {
+      display: block;
+    }
+  }
+}

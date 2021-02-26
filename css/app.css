@@ -140,12 +140,11 @@ body {
   color: #333333;
   font-size: 16px;
   line-height: 1.6;
-  font-family: "メイリオ", "Meiryo", "ＭＳ ゴシック",
-    "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", sans-serif;
+  font-family: "メイリオ", "Meiryo", "ＭＳ ゴシック", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", sans-serif;
   -webkit-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
   letter-spacing: 0.1em;
 }
 
@@ -178,21 +177,11 @@ img {
   position: relative;
   padding-bottom: 120px;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   /*footer、header全て含めてmin-height:100vh（ブラウザの画面の高さ）に*/
-  background: -webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        from(rgba(255, 255, 255, 0)),
-        to(white)
-      )
-      no-repeat,
-    url("../img/hero.jpg") no-repeat;
-  background: linear-gradient(rgba(255, 255, 255, 0), white) no-repeat,
-    url("../img/hero.jpg") no-repeat;
-  background: -webkit-linear-gradient(rgba(255, 255, 255, 0), white) no-repeat,
-    url("../img/hero.jpg") no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(white)) no-repeat, url("../img/hero.jpg") no-repeat;
+  background: linear-gradient(rgba(255, 255, 255, 0), white) no-repeat, url("../img/hero.jpg") no-repeat;
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0), white) no-repeat, url("../img/hero.jpg") no-repeat;
   background-size: 100% 500px, 100% 500px;
 }
 
@@ -204,7 +193,7 @@ img {
 
 .l-container {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   width: 1045px;
   margin: 0 auto;
   padding-bottom: 120px;
@@ -246,10 +235,10 @@ img {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 350px 200px;
-  grid-template-rows: 350px 200px;
+      grid-template-rows: 350px 200px;
   -ms-grid-columns: 2fr 1fr 1fr 2fr;
-  grid-template-columns: 2fr 1fr 1fr 2fr;
-  grid-template-areas: "areaA areaA areaB areaB" "areaC areaD areaD areaE";
+      grid-template-columns: 2fr 1fr 1fr 2fr;
+      grid-template-areas: "areaA areaA areaB areaB" "areaC areaD areaD areaE";
 }
 
 @media screen and (max-width: 1200px) {
@@ -261,20 +250,18 @@ img {
 .l-grid__about--areaA {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: areaA;
 }
 
 .l-grid__about--areaB {
   -ms-grid-row: 1;
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 2;
+  -ms-grid-column: 2;
   grid-area: areaB;
 }
 
 .l-grid__about--areaC {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
   grid-area: areaC;
 }
 
@@ -291,6 +278,41 @@ img {
   grid-area: areaE;
 }
 
+.l-grid__reservation {
+  display: -ms-grid;
+  display: grid;
+  margin-bottom: 40px;
+  -ms-grid-rows: 350px;
+      grid-template-rows: 350px;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: "areaA areaB areaC";
+}
+
+@media screen and (max-width: 1200px) {
+  .l-grid__reservation {
+    display: block;
+  }
+}
+
+.l-grid__reservation--areaA {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: areaA;
+}
+
+.l-grid__reservation--areaB {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: areaB;
+}
+
+.l-grid__reservation--areaC {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: areaC;
+}
+
 .l-footer {
   background: #4b66ac;
   color: #ffffff;
@@ -298,11 +320,11 @@ img {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
   height: 120px;
   position: absolute;
@@ -315,9 +337,13 @@ img {
   }
 }
 
+.l-footer__name {
+  font-size: 12px;
+}
+
 .l-header {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   width: 1045px;
   margin: 0 auto;
   height: 80px;
@@ -327,11 +353,11 @@ img {
   display: flex;
   position: relative;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-left: 20px;
   padding-right: 20px;
   -webkit-transition: 0.3s;
@@ -380,7 +406,7 @@ img {
     -webkit-transition: 0.5s;
     transition: 0.5s;
     -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
+            transform: translateX(-100%);
     z-index: 1;
   }
 }
@@ -390,20 +416,20 @@ img {
   cursor: pointer;
   border-radius: 5px;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .c-btn:hover:not(:disabled) {
   -webkit-transform: translateY(-3px);
-  transform: translateY(-3px);
+          transform: translateY(-3px);
   -webkit-transition: 0.3s;
   transition: 0.3s;
   -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .c-btn:disabled {
@@ -416,13 +442,7 @@ img {
   color: #fff;
   background: #4b66ac;
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#87a6c4),
-    to(#4b66ac)
-  );
+  background: -webkit-gradient(linear, left top, right top, from(#87a6c4), to(#4b66ac));
   background: linear-gradient(to right, #87a6c4, #4b66ac);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
@@ -465,7 +485,7 @@ img {
   font-size: 18px;
   color: #333333;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .c-input__l {
@@ -513,8 +533,8 @@ img {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 18px;
 }
 
@@ -558,7 +578,7 @@ img {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   position: relative;
   width: 38px;
   height: 30px;
@@ -576,7 +596,7 @@ img {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   position: absolute;
   left: 0;
   width: 100%;
@@ -599,7 +619,7 @@ img {
 
 .p-menu-trigger.active span:nth-of-type(1) {
   -webkit-transform: translateY(12px) rotate(-45deg);
-  transform: translateY(12px) rotate(-45deg);
+          transform: translateY(12px) rotate(-45deg);
 }
 
 .p-menu-trigger.active span:nth-of-type(2) {
@@ -608,7 +628,7 @@ img {
 
 .p-menu-trigger.active span:nth-of-type(3) {
   -webkit-transform: translateY(-15px) rotate(45deg);
-  transform: translateY(-15px) rotate(45deg);
+          transform: translateY(-15px) rotate(45deg);
 }
 
 .p-about__title {
@@ -956,6 +976,109 @@ img {
 
 @media screen and (max-width: 768px) {
   .p-recruit__br {
+    display: block;
+  }
+}
+
+.p-reservation__title {
+  font-size: 24px;
+  color: #4b66ac;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+  .p-reservation__title {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+}
+
+.p-reservation__sub-title {
+  text-align: center;
+  font-size: 24px;
+  color: #4b66ac;
+  margin: 15px 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .p-reservation__sub-title {
+    font-size: 18px;
+    margin: 5px 0;
+  }
+}
+
+.p-reservation__card {
+  background-color: #d5e5fc;
+  border-radius: 6px;
+  margin: 0 5px;
+  padding: 5px;
+}
+
+@media screen and (max-width: 1200px) {
+  .p-reservation__card {
+    margin: 20px;
+    padding: 20px;
+  }
+}
+
+.p-reservation__list {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.p-reservation__text {
+  font-size: 18px;
+  padding: 0 10px 15px 10px;
+}
+
+@media screen and (max-width: 1000px) {
+  .p-reservation__text {
+    font-size: 14px;
+    padding: 0 5px 10px 5px;
+  }
+}
+
+.p-reservation__img {
+  text-align: center;
+}
+
+.p-reservation__img--btn {
+  width: 116px;
+  margin: 0 auto;
+}
+
+.p-reservation__img--qr {
+  width: 110px;
+}
+
+.p-reservation__img--sp-woman {
+  width: 110px;
+}
+
+.p-reservation__img--prescription {
+  width: 110px;
+}
+
+.p-reservation__img--pharmacy {
+  width: 170px;
+}
+
+.p-reservation__pc {
+  display: block;
+}
+
+@media screen and (max-width: 1200px) {
+  .p-reservation__pc {
+    display: none;
+  }
+}
+
+.p-reservation__sp {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .p-reservation__sp {
     display: block;
   }
 }
