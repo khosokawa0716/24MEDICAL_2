@@ -38,7 +38,7 @@
     list-style-type: disc;
     margin-left: $space_xl;
   }
-  
+
   &__text {
     font-size: $font-size_l;
     padding: 0 $space_m $space_l $space_m;
@@ -48,8 +48,43 @@
     }
   }
 
+  &__note {
+    text-align: right;
+    margin-top: $space_l;
+    padding-right: $space_3l;
+    @include sp() {
+      text-align: center;
+      padding-right: 0;
+    }
+  }
+
   &__img {
     text-align: center;
+    &--icon {
+      width: 40px;
+      padding-bottom: 9px;
+      padding-right: 9px;
+      @include sp() {
+        width: 30px;
+        padding-bottom: 9px;
+        padding-right: 6px;
+      }
+    }
+    &-top--icon {
+      width: 40px;
+      padding-bottom: 9px;
+      padding-right: 9px;
+      @include tb() {
+        width: 35px;
+        padding-bottom: 0;
+        padding-right: 7px;
+      }
+      @include sp() {
+        width: 30px;
+        padding-bottom: 0;
+        padding-right: 6px;
+      }
+    }
     &--btn {
       width: 116px;
       margin: 0 auto;
