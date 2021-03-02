@@ -48,16 +48,6 @@
     }
   }
 
-  &__note {
-    text-align: right;
-    margin-top: $space_l;
-    padding-right: $space_3l;
-    @include sp() {
-      text-align: center;
-      padding-right: 0;
-    }
-  }
-
   &__img {
     text-align: center;
     &--icon {
@@ -72,11 +62,9 @@
     }
     &-top--icon {
       width: 40px;
-      padding-bottom: 9px;
       padding-right: 9px;
       @include tb() {
-        width: 35px;
-        padding-bottom: 0;
+        width: 30px;
         padding-right: 7px;
       }
       @include sp() {
@@ -86,7 +74,8 @@
       }
     }
     &--btn {
-      width: 116px;
+      width: 174px;
+      height: 54px;
       margin: 0 auto;
     }
     &--qr {

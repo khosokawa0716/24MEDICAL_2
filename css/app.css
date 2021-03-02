@@ -219,29 +219,6 @@ img {
   }
 }
 
-.l-container__title {
-  text-align: center;
-  font-size: 38px;
-  margin-bottom: 40px;
-}
-
-@media screen and (max-width: 1000px) {
-  .l-container__title {
-    font-size: 24px;
-    margin-bottom: 30px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .l-container__title {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
-    font-size: 18px;
-  }
-}
-
 .l-grid__about {
   display: -ms-grid;
   display: grid;
@@ -696,6 +673,12 @@ img {
   padding: 0 15px;
 }
 
+@media screen and (max-width: 1200px) {
+  .p-about__text {
+    padding: 0;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .p-about__text {
     font-size: 14px;
@@ -717,6 +700,10 @@ img {
   .p-about__image {
     margin-bottom: 15px;
   }
+}
+
+.p-about__link {
+  color: #4b66ac;
 }
 
 .p-company-list {
@@ -1055,19 +1042,6 @@ img {
   }
 }
 
-.p-reservation__note {
-  text-align: right;
-  margin-top: 15px;
-  padding-right: 40px;
-}
-
-@media screen and (max-width: 768px) {
-  .p-reservation__note {
-    text-align: center;
-    padding-right: 0;
-  }
-}
-
 .p-reservation__img {
   text-align: center;
 }
@@ -1088,14 +1062,12 @@ img {
 
 .p-reservation__img-top--icon {
   width: 40px;
-  padding-bottom: 9px;
   padding-right: 9px;
 }
 
 @media screen and (max-width: 1000px) {
   .p-reservation__img-top--icon {
-    width: 35px;
-    padding-bottom: 0;
+    width: 30px;
     padding-right: 7px;
   }
 }
@@ -1109,7 +1081,8 @@ img {
 }
 
 .p-reservation__img--btn {
-  width: 116px;
+  width: 174px;
+  height: 54px;
   margin: 0 auto;
 }
 
@@ -1151,6 +1124,10 @@ img {
 
 .marginT-l {
   margin-top: 15px;
+}
+
+.marginT-xl {
+  margin-top: 20px;
 }
 
 .marginT-3l {

@@ -36,6 +36,9 @@
     font-size: $font-size_l;
     margin-bottom: $space_3l;
     padding: 0 $space_l;
+    @include pc() {
+      padding: 0;
+    }
     @include sp() {
       font-size: $font-size_m;
       margin-bottom: $space_xl;
@@ -50,5 +53,9 @@
     @include sp() {
       margin-bottom: $space_l;
     }
+  }
+
+  &__link {
+    color: $color_corp;
   }
 }
